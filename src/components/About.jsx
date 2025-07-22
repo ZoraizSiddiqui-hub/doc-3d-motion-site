@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BookOpen, Users, Award, Heart, Target, Lightbulb } from 'lucide-react';
+import { Cake, Users, Award, Heart, Target, Sparkles } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -11,26 +11,26 @@ export const About = () => {
   };
 
   const skills = [
-    "Curriculum Development", "Student Assessment", "Educational Technology",
-    "Classroom Management", "Interactive Learning", "Research Methods",
-    "Project-Based Learning", "Differentiated Instruction"
+    "Custom Cake Design", "Wedding Cakes", "Birthday Cakes",
+    "Artisan Breads", "French Pastries", "Gluten-Free Options",
+    "Vegan Delights", "Seasonal Specialties"
   ];
 
   const values = [
     {
       icon: Heart,
-      title: "Passion for Teaching",
-      description: "Dedicated to inspiring and nurturing every student's potential"
+      title: "Made with Love",
+      description: "Every creation is crafted with passion and attention to detail"
     },
     {
       icon: Target,
-      title: "Goal-Oriented",
-      description: "Focused on achieving measurable learning outcomes and student success"
+      title: "Quality First",
+      description: "Using only the finest ingredients for the best taste and quality"
     },
     {
-      icon: Lightbulb,
-      title: "Innovation",
-      description: "Constantly exploring new teaching methods and educational technologies"
+      icon: Sparkles,
+      title: "Creative Excellence",
+      description: "Bringing your sweetest dreams to life with innovative designs"
     }
   ];
 
@@ -42,16 +42,16 @@ export const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            About <span className="medical-text-gradient">Me</span>
+            About <span className="medical-text-gradient">Eclat Bakes</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            An experienced educator committed to transforming lives through quality education
-            and innovative teaching methodologies.
+            A passion-driven home bakery dedicated to creating exceptional baked goods 
+            that bring joy and sweetness to every occasion.
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left column - Bio and stats */}
+          {/* Left column - Story and stats */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
@@ -60,25 +60,25 @@ export const About = () => {
           >
             <div className="prose prose-lg text-muted-foreground">
               <p className="text-lg leading-relaxed">
-                With over 15 years of experience in education, I have dedicated my career to 
-                creating engaging learning environments that foster creativity, critical thinking, 
-                and personal growth. My approach combines traditional pedagogical principles with 
-                modern educational technology to deliver exceptional learning experiences.
+                Founded with a simple belief that great baking starts with great ingredients 
+                and genuine care, Eclat Bakes has been serving the community with handcrafted 
+                delights for over 5 years. What started as a hobby in my kitchen has grown 
+                into a beloved local bakery known for quality and creativity.
               </p>
               <p className="text-lg leading-relaxed">
-                I specialize in curriculum development, student assessment, and implementing 
-                innovative teaching strategies that cater to diverse learning styles. My goal 
-                is to inspire students to become lifelong learners and confident individuals.
+                From elaborate wedding cakes to everyday treats, we specialize in making 
+                your special moments even sweeter. Our commitment to using fresh, locally 
+                sourced ingredients ensures every bite is a delightful experience.
               </p>
             </div>
 
             {/* Stats grid */}
             <div className="grid grid-cols-2 gap-6">
               {[
-                { icon: Users, number: "500+", label: "Students Mentored", color: "text-blue-500" },
-                { icon: BookOpen, number: "50+", label: "Courses Developed", color: "text-green-500" },
-                { icon: Award, number: "25+", label: "Awards Received", color: "text-purple-500" },
-                { icon: Heart, number: "15+", label: "Years Teaching", color: "text-red-500" }
+                { icon: Users, number: "1000+", label: "Happy Customers", color: "text-blue-500" },
+                { icon: Cake, number: "500+", label: "Custom Cakes", color: "text-pink-500" },
+                { icon: Award, number: "10+", label: "Awards Won", color: "text-yellow-500" },
+                { icon: Heart, number: "5+", label: "Years Experience", color: "text-red-500" }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -101,10 +101,10 @@ export const About = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="space-y-8"
           >
-            {/* Skills */}
+            {/* Specialties */}
             <Card className="card-medical">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-foreground">Core Competencies</h3>
+                <h3 className="text-2xl font-bold mb-6 text-foreground">Our Specialties</h3>
                 <div className="flex flex-wrap gap-3">
                   {skills.map((skill, index) => (
                     <motion.div
@@ -127,7 +127,7 @@ export const About = () => {
 
             {/* Values */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-foreground">Teaching Philosophy</h3>
+              <h3 className="text-2xl font-bold text-foreground">Our Values</h3>
               {values.map((value, index) => (
                 <motion.div
                   key={index}

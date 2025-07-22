@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, BookOpen } from 'lucide-react';
+import { Menu, X, Cake } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const Navbar = () => {
@@ -18,8 +18,7 @@ export const Navbar = () => {
   const navItems = [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Experience', href: '#experience' },
+    { label: 'Products', href: '#products' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -55,10 +54,10 @@ export const Navbar = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="p-2 rounded-full bg-primary/10 backdrop-blur-md">
-              <BookOpen className="w-6 h-6 text-primary" />
+              <Cake className="w-6 h-6 text-primary" />
             </div>
             <span className="text-xl font-bold text-foreground">
-              Sarah <span className="text-primary">Educator</span>
+              Eclat <span className="text-primary">Bakes</span>
             </span>
           </motion.div>
 
@@ -87,7 +86,7 @@ export const Navbar = () => {
                 onClick={() => scrollToSection('#contact')}
                 className="bg-primary hover:bg-primary-dark text-primary-foreground hover:scale-105 transition-all duration-300 shadow-medical"
               >
-                Get Started
+                Order Now
               </Button>
             </motion.div>
           </div>
@@ -140,7 +139,7 @@ export const Navbar = () => {
                 onClick={() => scrollToSection('#contact')}
                 className="w-full bg-primary hover:bg-primary-dark text-primary-foreground"
               >
-                Get Started
+                Order Now
               </Button>
             </motion.div>
           </div>
